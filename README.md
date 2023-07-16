@@ -1,4 +1,4 @@
-# treesitter-renamer
+# treesitter-renamer.mvim
 
 A plugin to rename files based on tree-sitter nodes.
 
@@ -13,15 +13,17 @@ You rename a ruby on rails model using LSP. All the code gets beautifully update
 Add the following code to your `lazy` config:
 
 ```lua
-    {
-      "metalelf0/treesitter-renamer.nvim",
-      dependencies = {
-        "tpope/vim-eunuch",
-      },
-      config = function()
-        require("treesitter-renamer").config()
-      end,
+{
+  "metalelf0/treesitter-renamer.nvim",
+  dependencies = {
+    "tpope/vim-eunuch",
+  },
+  opts = {
+    bindings = {
+      rename_file = "<leader>rr"
     }
+  },
+}
 ```
 
 ## Usage
@@ -31,4 +33,4 @@ Right now, only markdown is supported. Enter a markdown file with an H1 title, h
 ## Next Steps
 
 - [ ] support more languages
-- [ ] allow changing keybind
+- [x] allow changing keybind
