@@ -1,4 +1,4 @@
-# treesitter-renamer.mvim
+# treesitter-renamer.nvim
 
 A plugin to rename files based on tree-sitter nodes.
 
