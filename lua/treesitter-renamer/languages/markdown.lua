@@ -10,7 +10,7 @@ M.rename_text = function()
 	local h1_node = M.search_header_into(syntax_tree, 1)
 	local h1_text = ""
 	if h1_node then
-		h1_text = vim.treesitter.get_node_text(h1_node, 0):gsub("^%s+", "")
+		h1_text = vim.treesitter.get_node_text(h1_node, 0):gsub("^%s+", ""):gsub("[/\\]", " ")
 	end
 
 	return h1_text
