@@ -18,6 +18,7 @@ M.treesitter_rename = function()
 	local language_handler = langs[current_language]
 	local new_file_name = language_handler.rename_text() .. language_handler.file_extension()
 	M.rename_current_file_with_tpope_eunuch(new_file_name)
+	vim.cmd("edit")
 	-- local new_file_path = fs_utils.fs_normalize_path(vim.fn.expand("%:p:h") .. "/" .. new_file_name)
 	-- local cur_file_path = fs_utils.fs_normalize_path(vim.fn.expand("%:p"))
 	-- fs_utils.rename_loaded_buffer(vim.api.nvim_get_current_buf(), cur_file_path, new_file_path)
